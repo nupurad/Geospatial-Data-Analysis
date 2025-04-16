@@ -116,7 +116,7 @@
         </Placemark>
     </Folder>
     <Placemark>
-        <name>myapartment</name>
+        <name>23rd_cafe</name>
             <styleUrl>#z1</styleUrl>
             <Point>
                 <coordinates>-118.280878,34.0334813</coordinates>
@@ -132,7 +132,7 @@
         </Polygon>
     </Placemark>
     <Placemark>
-  <name>myapartment to CinematicArts</name>
+  <name>23rd_cafe to CinematicArts</name>
   <Style>
     <LineStyle>
       <color>ff0000ff</color> <!-- closest location !-->
@@ -148,7 +148,7 @@
 </Placemark>
 
 <Placemark>
-  <name>myapartment to Leavey</name>
+  <name>23rd_cafe to Leavey</name>
   <Style>
     <LineStyle>
       <color>ff00ff00</color> 
@@ -164,7 +164,7 @@
 </Placemark>
 
 <Placemark>
-  <name>myapartment to TrojanGrounds Cafe</name>
+  <name>23rd_cafe to TrojanGrounds Cafe</name>
   <Style>
     <LineStyle>
       <color>ff00ff00</color> 
@@ -180,7 +180,7 @@
 </Placemark>
 
 <Placemark>
-  <name>myapartment to fountain opp-Leavey</name>
+  <name>23rd_cafe to fountain opp-Leavey</name>
   <Style>
     <LineStyle>
       <color>ff00ff00</color> 
