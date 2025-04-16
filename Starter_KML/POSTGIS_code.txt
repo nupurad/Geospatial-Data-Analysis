@@ -19,21 +19,21 @@ INSERT INTO locations(label, geom) VALUES
 ('ViterbiEngg', ST_SetSRID(ST_MakePoint(-118.2888985,34.0206264), 4326)),
 ('MusickLaw', ST_SetSRID(ST_MakePoint(-118.2847136,34.0190878), 4326)),
 ('CinematicArts', ST_SetSRID(ST_MakePoint(-118.2863273,34.0237334), 4326)),
-('myapartment', ST_SetSRID(ST_MakePoint(-118.280878,34.0334813), 4326));*/
+('23rd_cafe', ST_SetSRID(ST_MakePoint(-118.280878,34.0334813), 4326));*/
 
 
 --to create a 'convex hull' of all 13 locations
 SELECT ST_AsKML(ST_ConvexHull(ST_Collect(geom))) AS kml_polygon
 FROM locations;*/
 
---to find 4 nearest neighbors to Home
-SELECT label, ST_AsText(l.geom) AS point, ST_Distance(l.geom, apt.geom) AS dist
+--to find 4 nearest neighbors to 23rd Cafe
+SELECT label, ST_AsText(l.geom) AS point, ST_Distance(l.geom, c.geom) AS dist
 FROM locations l, 
-(SELECT geom FROM locations WHERE label = 'myapartment') apt
+(SELECT geom FROM locations WHERE label = '23rd_cafe') c
 WHERE 
-  l.label <> 'myapartment'
+  l.label <> '23rd_cafe'
 ORDER BY 
-  l.geom <-> apt.geom
+  l.geom <-> c.geom
 LIMIT 4;
 
 
