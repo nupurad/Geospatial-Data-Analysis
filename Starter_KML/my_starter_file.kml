@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+    <Folder>
+        <name>libraries</name>
+        
+        <Placemark>
+            <name>Leavey</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2829636,34.0216094</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>EdwardDoheny</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2840953,34.0202622</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>GaughanTiberti</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2825513,34.0185863</coordinates>
+            </Point>
+        </Placemark>
+    </Folder>
+
+    <Folder>
+        <name>eateries</name>
+        
+        <Placemark>
+            <name>TrojanGrounds</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2828102,34.0215269</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>PandaExpress</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2864401,34.0202802</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>ChadTons</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2824294,34.0187768</coordinates>
+            </Point>
+        </Placemark>
+    </Folder>
+
+    <Folder>
+        <name>waterworks</name>
+
+        <Placemark>
+            <name>TownGown</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2842691,34.0192184</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>Opp-TommyTrojan</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2854495,34.0203114</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>Opp-Leavey</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2831296,34.0204911</coordinates>
+            </Point>
+        </Placemark>
+    </Folder>
+
+    <Folder>
+        <name>department buildings</name>
+
+        <Placemark>
+            <name>ViterbiEngg</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2888985,34.0206264</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>MusickLaw</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2847136,34.0190878</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>CinematicArts</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.2863273,34.0237334</coordinates>
+            </Point>
+        </Placemark>
+    </Folder>
+    <Placemark>
+        <name>myapartment</name>
+            <styleUrl>#z1</styleUrl>
+            <Point>
+                <coordinates>-118.280878,34.0334813</coordinates>
+            </Point>
+    </Placemark>
+    <Placemark>
+        <Polygon>
+            <outerBoundaryIs>
+                <LinearRing>
+                    <coordinates>-118.2825513,34.0185863 -118.2847136,34.0190878 -118.2888985,34.0206264 -118.280878,34.0334813 -118.2824294,34.0187768 -118.2825513,34.0185863</coordinates>
+                </LinearRing>
+            </outerBoundaryIs>
+        </Polygon>
+    </Placemark>
+    <Placemark>
+  <name>myapartment to CinematicArts</name>
+  <Style>
+    <LineStyle>
+      <color>ff0000ff</color> <!-- closest location !-->
+      <width>3</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -118.280878,34.0334813  
+      -118.2863273,34.0237334 
+    </coordinates>
+  </LineString>
+</Placemark>
+
+<Placemark>
+  <name>myapartment to Leavey</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color> 
+      <width>3</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -118.280878,34.0334813  
+      -118.2829636,34.0216094  
+    </coordinates>
+  </LineString>
+</Placemark>
+
+<Placemark>
+  <name>myapartment to TrojanGrounds Cafe</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color> 
+      <width>3</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -118.280878,34.0334813  
+      -118.2828102,34.0215269  
+    </coordinates>
+  </LineString>
+</Placemark>
+
+<Placemark>
+  <name>myapartment to fountain opp-Leavey</name>
+  <Style>
+    <LineStyle>
+      <color>ff00ff00</color> 
+      <width>3</width>
+    </LineStyle>
+  </Style>
+  <LineString>
+    <coordinates>
+      -118.280878,34.0334813  
+      -118.2831296,34.0204911  
+    </coordinates>
+  </LineString>
+</Placemark>
+</Document>
+</kml>

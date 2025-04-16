@@ -1,0 +1,39 @@
+CREATE extension POSTGIS;
+
+CREATE TABLE locations (
+    id SERIAL PRIMARY KEY,
+    label TEXT,
+    geom GEOMETRY(Point, 4326)
+);
+
+INSERT INTO locations(label, geom) VALUES
+('Leavey', ST_SetSRID(ST_MakePoint(-118.2829636,34.0216094), 4326)),
+('EdwardDoheny', ST_SetSRID(ST_MakePoint(-118.2840953,34.0202622), 4326)),
+('GaughanTiberti', ST_SetSRID(ST_MakePoint(-118.2825513,34.0185863), 4326)),
+('TrojanGrounds', ST_SetSRID(ST_MakePoint(-118.2828102,34.0215269), 4326)),
+('PandaExpress', ST_SetSRID(ST_MakePoint(-118.2864401,34.0202802), 4326)),
+('ChadTons', ST_SetSRID(ST_MakePoint(-118.2824294,34.0187768), 4326)),
+('TownGown', ST_SetSRID(ST_MakePoint(-118.2842691,34.0192184), 4326)),
+('Opp-TommyTrojan', ST_SetSRID(ST_MakePoint(-118.2854495,34.0203114), 4326)),
+('Opp-Leavey', ST_SetSRID(ST_MakePoint(-118.2831296,34.0204911), 4326)),
+('ViterbiEngg', ST_SetSRID(ST_MakePoint(-118.2888985,34.0206264), 4326)),
+('MusickLaw', ST_SetSRID(ST_MakePoint(-118.2847136,34.0190878), 4326)),
+('CinematicArts', ST_SetSRID(ST_MakePoint(-118.2863273,34.0237334), 4326)),
+('myapartment', ST_SetSRID(ST_MakePoint(-118.280878,34.0334813), 4326));*/
+
+
+--to create a 'convex hull' of all 13 locations
+SELECT ST_AsKML(ST_ConvexHull(ST_Collect(geom))) AS kml_polygon
+FROM locations;*/
+
+--to find 4 nearest neighbors to Home
+SELECT label, ST_AsText(l.geom) AS point, ST_Distance(l.geom, apt.geom) AS dist
+FROM locations l, 
+(SELECT geom FROM locations WHERE label = 'myapartment') apt
+WHERE 
+  l.label <> 'myapartment'
+ORDER BY 
+  l.geom <-> apt.geom
+LIMIT 4;
+
+
